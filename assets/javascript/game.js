@@ -30,27 +30,39 @@ function jewelGenerator(arr) {
     }
 }
 
-// adds jewel's random number attribute to the playerNum
+var round = setupGame(jewelArr)
 
+$("#comp-num").text(round.compNum)
+
+$("#wins").text(round.wins)
+
+$("#losses").text(round.losses)
+
+$("#player-num").text(round.playerNum)
+
+// adds jewel's random number attribute to the playerNum
+$("#new-game").on("click", function () {
 var round = setupGame(jewelArr)
 console.log(round)
 
 $("#comp-num").text(round.compNum)
 
-function playerScore(game){
-    game.playerNum += $(this).attr;
-    console.log(game.playerNum)
-    return game.playerNum;
-}
+$("#wins").text(round.wins)
 
+$("#losses").text(round.losses)
+
+$("#player-num").text(round.playerNum)
+});
+
+
+// adds jewel's random number attribute to the playerNum
 $(".bttn").on("click", function () {
     var jewelValue = ($(this).attr("jewel-number"));
     jewelValue = parseInt(jewelValue);
 
-    round.playerNum +=
-  
-    playerScore(game);
-    $("#player-num").text(game.playerNum);
+    round.playerNum += jewelValue;
+
+    $("#player-num").text(round.playerNum);
 });
 
 //checks if player has won
@@ -58,7 +70,18 @@ $(".bttn").on("click", function () {
 // checks if player has lost
 
 // new game - resets random numbers and sets user score to 0
+$("#new-game").on("click", function () {
+    var round = setupGame(jewelArr)
+    console.log(round)
 
+    $("#comp-num").text(round.compNum)
+
+    $("#wins").text(round.wins)
+
+    $("#losses").text(round.losses)
+
+    $("#player-num").text(round.playerNum)
+});
 
 
 
