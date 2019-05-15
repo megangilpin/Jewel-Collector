@@ -1,25 +1,24 @@
 // Array of id's linked to jewels for random numbers to be assigned to
 var jewelArr = ["#blue-jewel", "#green-jewel", "#pink-jewel", "#purple-jewel"]
 
-// creates an object that sets up all components of the game
-function setupRound(arr){
-  var game = {
-    losses:0,
-    wins: 0,
-    compNum: largeRanNum(),
-    playerNum: 0,
-    bttnNum: jewelGenerator(arr), 
-  };
-  return game
-}
+
+// creates object of game attributes
+    var round = {
+        wins: 0,
+        losses: 0,
+        compNum: largeRanNum(),
+        playerNum: 0,
+        bttnNum: jewelGenerator(jewelArr),
+    };
+
 
 // sets up game
-function setupGame(arr, win, losses){
-  var newRound = {
-    
+function setupGame(arr){
+  var newGame = 
+    bttnNum = jewelGenerator(arr);
+    compNum = largeRanNum();
+    playerNum = playerNum;
   }
-
-}
 
 // Creates random number from 19-120 to be used as the computer's random number
 function largeRanNum(){
@@ -37,9 +36,6 @@ function jewelGenerator(arr) {
         $(arr[i]).attr("jewel-number", smallRanNum());
     }
 }
-
-// on page load sets game stats
-var round = setupRound(jewelArr)
 
 $("#comp-num").text(round.compNum)
 
@@ -65,40 +61,46 @@ $(".bttn").on("click", function () {
         round.wins += 1;
         $("#wins").text(round.wins);
         alert("You win all the Jewels");
+        round.compNum = largeRanNum();
+        round.bttnNum = jewelGenerator(jewelArr);
     }
 
     else if (round.playerNum >= round.compNum) {
         round.losses += 1;
         $("#losses").text(round.losses);
         alert("You lose! No Jewels for you!");
-        ;
     }
 
 });
 
-
-// new game - resets random numbers and sets user score to 0
+// new game - resets random numbers and sets user score to 
 $("#new-game").on("click", function () {
     var round = setupGame(jewelArr)
-    console.log(round)
 
     $("#comp-num").text(round.compNum)
 
-    $("#wins").text(round.wins)
-
-    $("#losses").text(round.losses)
-
     $("#player-num").text(round.playerNum)
-    
+
+    $("#wins").text(wins)
+
+    $("#losses").text(losses)
 });
+
+// var round = setupRound(jewelArr)
+
+    // var wins = 0
+    // var losses = 0
+    // var compNum = largeRanNum()
+    // var playerNum = 0
+    // var bttnNum = jewelGenerator(jewelArr)
 
 // // sets up game
 // function setupGame(arr, win, losses) {
 //     var newRound = {
-//         compNum: largeRanNum()
-//     wins: win,
-//         losses: losses,
-//         round: setupRound(jewelGenerator(arr)),
+//       compNum: largeRanNum()
+//       wins: win,
+//       losses: losses,
+//       round: setupRound(jewelGenerator(arr)),
 //     }
 //     return newRound
 // }
