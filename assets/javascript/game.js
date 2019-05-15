@@ -7,13 +7,12 @@ var wins = 0;
 var losses = 0;
 var compNum = 0;
 var playerNum = 0;
-var buttonNum = jewelGenerator(jewelArr)
 
 // sets up all the game attributes
-function setupGame() {
+function setupGame(arr) {
     compNum = largeRanNum();
     playerNum = 0;
-    buttonNum();
+    jewelGenerator(arr);
     $("#comp-num").text(compNum);
     $("#player-num").text(playerNum);
 }
@@ -49,7 +48,7 @@ $(".bttn").on("click", function () {
         wins += 1;
         $("#wins").text(wins);
         alert("You win all the Jewels");
-        setupGame();
+        setupGame(jewelArr);
     }
 
     // checks if playerNum is bigger than compNum if true adds to losses counter and alerts player they lost
@@ -57,13 +56,13 @@ $(".bttn").on("click", function () {
         losses += 1;
         $("#losses").text(losses);
         alert("You lose! No Jewels for you!");
-        setupGame();
+        setupGame(jewelArr);
     }
 });
 
-// button to start playing the game
+// starts game
 $("#new-game").on("click", function () {
-  setupGame()
+  setupGame(jewelArr)
   wins = 0;
   losses = 0;
   $("#wins, #losses").empty();
