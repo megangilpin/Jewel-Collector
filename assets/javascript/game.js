@@ -1,9 +1,7 @@
 // Array of id's for random numbers to be assigned to
-var jewelArr = ["#bluejewel", "#greenjewel", "#pinkjewel", "#purplejewel"]
+var jewelArr = ["#blue-jewel", "#green-jewel", "#pink-jewel", "#purple-jewel"]
 
-var compRanNum = largeRanNum()
-
-var bttnRanNum = smallRanNum()
+// var bttnRanNum = smallRanNum()
 
 // creates an object that sets up all components of the game
 function setupGame(num1, num2){
@@ -12,32 +10,36 @@ function setupGame(num1, num2){
     wins: 0,
     compNum: num1, //will call the function that assigns the random number from the large num function
     playerNum: 0,
-    bttnNums: num2, //will call the function that assigns the random number values to the button id's
+    bttnNum: num2, //will call the function that assigns the random number values to the button id's
   };
   return game
 }
 
 // Creates random number from 19-120 to be used as the computer's random number
 function largeRanNum(){
-    return Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+    var compRanNum =  Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+    return compRanNum;
 }
 
 // Creates random number from 19-120 to be used as the computer's random number
 function smallRanNum() {
-    return Math.floor(Math.random() * 12) + 1;
+    var ranNum =  Math.floor(Math.random() * 12) + 1;
+    return ranNum;
 }
 
 // Assigns an array of id's used on each jewel to a random number
-function jewelGenerator(arr, num) {
+function jewelGenerator(arr) {
     for (var i = 0; i < arr.length; i++) {
-        $(arr[i]).val(num);
-        // $(arr[i]).append(jewel)
-console.log(arr[i].val(num))
+        $(arr[i]).attr("jewel-number", smallRanNum());
+    }
 }
- 
 
-// writes larger random number to the compnum div
-// $("#compnum").text(function () {
+jewelGenerator(jewelArr)
+console.log(jewelGenerator(jewelArr))
+
+
+// writes larger random number to the comp-num div
+// $("#comp-num").text(function () {
 //     return Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 // });
 
@@ -63,15 +65,15 @@ console.log(arr[i].val(num))
 //         $(arr[i]).append(jewel)
 // console.log(jewel)
 // $('#app').val()
-    }
+    // }
 // jewel.attr("random-num", ranArr[0]);
 // console.log("jewel: ",jewel);
 // }
 
 
-jewelGenerator(jewelArr)
+// jewelGenerator(jewelArr)
 
-// adds jewel's random number attribut to the playerNum
+// adds jewel's random number attribute to the playerNum
 $(".bttn").on("click", function () {
     num += $(this).val();
     $("#player-num").text(num);
