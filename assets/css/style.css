@@ -3,11 +3,14 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.bttn:focus{
-   outline: none;
-   transform: 50%;
+h1{
+    font-family: 'Poller One', cursive;
+    font-size: 75px;
 }
 
+.bttn:focus{
+   outline: none;
+}
 
 .bttn {
     border: none;
@@ -23,12 +26,11 @@ body{
 .card{
     border: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #scorecard{
-    font-size: 20px;
-    background-color: rgb(46, 46, 46);
-    padding: 20px;
+    font-size: 15px;
     color: whitesmoke;
+    margin-bottom: 100px;
 }

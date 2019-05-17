@@ -12,13 +12,13 @@
 <!-- Assets css links -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poller+One&display=swap" rel="stylesheet">
 
     
 
 <!-- jquery link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Crystal Collector</title>
+    <title>Jewel Collector Game</title>
 </head>
 <body>
 
@@ -26,7 +26,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 text-center my-5">
-           <h1>Crystal Collector Game!</h1>
+           <h1>Jewel Collector Game</h1>
           </div>
         </div>
       </div>
@@ -36,10 +36,10 @@
 
     <div class="row">
       <div class="col-sm-12 jumbotron text-center my-4">
-        <p> Collect all the jewels you've ever dreamed of by clicking the jewel icons below. Get your jewel count equal to your goal amount and you win! but be careful if you go over you'll lose. Count your jewels carefull each one has its own random number. Click the button below to start playing.  </p>
+        <p> Collect all the jewels you've ever dreamed of by clicking the jewel icons below. Get your jewel count equal to your goal amount and you win! If you go over you'll lose so count your jewels carefully, each one has its own random number. Click the button below to play.</p>
 
-        <div class="row justify-content-center my-5">
-          <button type="button" class="btn btn-dark justify-content-center" id="new-game">Show Me The Jewels</button>
+        <div class="row justify-content-center my-3">
+          <button type="button" class="btn btn-dark justify-content-center" id="new-game">Lets Play!</button>
         </div>
         
       </div>
@@ -79,7 +79,7 @@
         </div>
 
         <div class="col-md-3">
-          <button class="bttn" id="green-jewel"><img class="img-fluid" src="assets/images/greenjewel.png " alt="green jewel"></button>
+          <button class="bttn" id="green-jewel"><img class="img-fluid" src="assets/images/greenjewel.png" alt="green jewel"></button>
         </div>
 
         <div class="col-md-3">
@@ -98,7 +98,7 @@
           <div class="col-sm-3">
             <div class="row text-center">
               <div class="card col-sm-12">
-                <div class="card-body rounded" id="scorecard">
+                <div class="card-body rounded  bg-dark" id="scorecard">
                   <h2 class="float-none">Wins: <span id="wins"></span></h2>
                   <h2 class="float-none">Losses: <span id="losses"></span></h2>
                 </div>
