@@ -12,6 +12,8 @@
 <!-- Assets css links -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+
     
 
 <!-- jquery link -->
@@ -33,65 +35,44 @@
     <section class="container">
 
     <div class="row">
-      <div class="col-sm-12 jumbotron text-center my-5">
-        <p> this is where the instructions go!</p>
+      <div class="col-sm-12 jumbotron text-center my-4">
+        <p> Collect all the jewels you've ever dreamed of by clicking the jewel icons below. Get your jewel count equal to your goal amount and you win! but be careful if you go over you'll lose. Count your jewels carefull each one has its own random number. Click the button below to start playing.  </p>
+
+        <div class="row justify-content-center my-5">
+          <button type="button" class="btn btn-dark justify-content-center" id="new-game">Show Me The Jewels</button>
+        </div>
+        
       </div>
     </div>
-
-
-  <div class="row justify-content-center my-5">
-    <button type="button" class="btn btn-dark justify-content-center" id="new-game">Show Me The Jewelz</button>
-  </div>
 
 
 <!-- This is where the game stats go -->
     <div class="row justify-content-center">
       <div class="col-sm-6">
 
-<!-- Number row -->
-        <div class="row ">
+<!-- row -->
+        <div class="row mt-4 text-center">
           <div class="card col-sm-6">
-            <div class="card-body">
-                     Goal: 
-                     <span id="comp-num"></span>
-              </div>
+            <h2 class="card-body">Goal </h2>
+              <div id="comp-num"></div>
            </div>
     
            <div class="card col-sm-6">
-               <div class="card-body">
-                    Jewel Count: 
-                   <span id="player-num"></span>
+               <h2 class="card-body">Jewel Count </h2>
+               <div id="player-num"></div>
               </div>
            </div>
         </div>
-<!-- End of first row -->
-
-<!-- Score Row -->
-        <div class="row ">
-          <div class="card col-sm-6">
-            <div class="card-body">
-              Wins: 
-              <span id="wins"></span>
-            </div>
-          </div>
-        
-          <div class="card col-sm-6">
-            <div class="card-body">
-              Losses: 
-              <span  id="losses"></span>
-            </div>
-          </div>
-        </div>
-<!-- End of score row -->
+<!-- End row -->
 
       </div> 
    </div>
 <!-- End of game stats -->
 
-<!-- Start of the buttons -->
-    <div class="row justify-content-center">
+<!-- Start of the Jewel buttons -->
+    <div class="row justify-content-center mt-3">
       <div class="col-sm-6 my-5">
-       <div class="row ">
+       <div class="row">
 
         <div class="col-sm-3">
             <button class="bttn" id="blue-jewel"><img class="img-fluid" src="assets/images/bluejewel.png" alt="blue jewel"></button>
@@ -113,20 +94,32 @@
       </div>
     </div>
   <!-- End of the buttons -->
+        <div class="row justify-content-center mt-3">
+          <div class="col-sm-3">
+            <div class="row text-center">
+              <div class="card col-sm-12">
+                <div class="card-body rounded" id="scorecard">
+                  <h2 class="float-none">Wins: <span id="wins"></span></h2>
+                  <h2 class="float-none">Losses: <span id="losses"></span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+  <!-- Footer -->
 
     </section>
 
+    <footer class="py-3 mt-5 bg-dark">
+      <div>
+        <p class="m-0 text-center text-white"><small>Copyright &copy; Megan Gilpin 2019</small></p>
+      </div>
+    </footer>
+
+
 <script type="text/javascript" src="assets/javascript/game.js"></script>
-<script type="text/javascript">
-
-
-
-  
-
-
-
-</script>
-
     
 </body>
 </html>
