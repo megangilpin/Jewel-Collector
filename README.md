@@ -1,4 +1,4 @@
-# Jewel Collector Game
+# Jewel Collector Game 	:gem:
 
 ## Overview
 Created jewel collector game with the help of jquery and bootstrap.
