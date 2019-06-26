@@ -1,5 +1,4 @@
-# unit-4-game
-Jewel game
+#Jewel Collector Game
 
 
 Created Jewel collector game with the help of jquery and bootstrap.
