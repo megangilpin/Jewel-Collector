@@ -1,7 +1,7 @@
 #Jewel Collector Game
 
-
-Created Jewel collector game with the help of jquery and bootstrap.
+## Overview
+Created jewel collector game with the help of jquery and bootstrap.
 
 
 ______
