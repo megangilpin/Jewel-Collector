@@ -1,7 +1,7 @@
 # Jewel Collector Game 	:gem:
 https://megangilpin.github.io/Jewel-Collector/
 
-![Jewel Collector Game Demo](demo/JewelCollector.gif)
+![Jewel Collector Game Demo](demo/jewelCollectormed.gif)
 
 ### Overview
 Created jewel collector game with the help of jquery and bootstrap.
