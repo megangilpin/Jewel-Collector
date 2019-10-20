@@ -7,6 +7,18 @@ var wins = 0;
 var losses = 0;
 var compNum = 0;
 var playerNum = 0;
+// var playGame = gameStats(jewelArr);
+
+// function gameStats(arr){
+// var round = {
+//   wins: 0,
+//   losses: 0,
+//   compNum: 0,
+//   playerNum: 0,
+//   ranNum: jewelGenerator(arr),
+//   }
+//   return round;
+// }
 
 // sets up all the game attributes
 function setupGame(arr) {
@@ -34,10 +46,18 @@ function jewelGenerator(arr) {
     }
 }
 
-// On jewel click changes attribute(always a string) into an integer then adds the integer to the player score then checks if player has won or lost
+// On jewel click changes attribute(always a string) into an integer then adds the integer to the player score then checks if player has won or lost)
 $(".bttn").on("click", function () {
+
+    
     var jewelValue = ($(this).attr("jewel-number"));
     jewelValue = parseInt(jewelValue);
+     console.log(jewelValue);
+    if (isNaN(jewelValue)){
+      gameStart();
+      jewelValue = ($(this).attr("jewel-number"));
+      jewelValue = parseInt(jewelValue);
+    }; 
 
     playerNum += jewelValue;
 
@@ -61,9 +81,11 @@ $(".bttn").on("click", function () {
 });
 
 // starts game
-$("#new-game").on("click", function () {
-  setupGame(jewelArr)
-  wins = 0;
-  losses = 0;
-  $("#wins, #losses").empty();
-});
+$("#new-game").on("click", gameStart);
+
+function gameStart() {
+    setupGame(jewelArr)
+    wins = 0;
+    losses = 0;
+    $("#wins, #losses").empty();
+}
